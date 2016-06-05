@@ -1,15 +1,15 @@
 package ws15.aufgabe4;
 
-import ws15.aufgabe3.Schliessfachtür;
+import ws15.aufgabe3.Schliessfachtuer;
 
 public class Aufgabe4 {
 
 	public static void main(String[] args) {
 		// 4a
-		Schliessfachtür[] array = new Schliessfachtür[100];
+		Schliessfachtuer[] array = new Schliessfachtuer[100];
 
 		for (int i = 0; i < array.length; i++) {
-			array[i] = new Schliessfachtür(i + 1, false);
+			array[i] = new Schliessfachtuer(i + 1, false);
 		}
 
 		System.out.println("ready");

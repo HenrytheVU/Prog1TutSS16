@@ -1,11 +1,11 @@
 package ws15.aufgabe3;
 
-public class Schliessfachtür {
+public class Schliessfachtuer {
 
 	private int nummer;
 	private boolean offen;
 
-	public Schliessfachtür(int nummer, boolean offen) {
+	public Schliessfachtuer(int nummer, boolean offen) {
 		this.nummer = nummer;
 		this.offen = offen;
 	}

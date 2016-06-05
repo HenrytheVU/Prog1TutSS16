@@ -6,7 +6,7 @@ public class Liste {
 	Knoten ende = null;
 
 	public void fuegeHinzu(Knoten knoten) {
-		// prüfe, ob liste leer ist
+		// pruefe, ob liste leer ist
 		if (start == null) {
 			start = knoten;
 			ende = knoten;
@@ -19,17 +19,32 @@ public class Liste {
 	}
 
 	public Knoten entferneErstenKnoten() {
+		// Liste leer
 		if (start == null) {
 			return null;
+			
+			// genau ein Knoten in der Liste
 		} else if (start == ende) {
 			Knoten temp = start;
 			start = null;
 			ende = null;
 			return temp;
+			
+			// mindestens zwei Knoten
 		} else {
 			Knoten temp = start;
 			start = start.getNext();
 			return temp;
 		}
+	}
+	
+	public boolean istLeer(){
+		if (ende == null){
+			return true;
+		} else {
+			return false;
+		}
+		
+//		return start == null;
 	}
 }
