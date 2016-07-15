@@ -36,6 +36,26 @@ public class Liste {
 		}
 	}
 	
+	// alternative Lösung
+	public void delete2(int position){
+		
+		// Sonderfall muss extra abgegfangen werden
+		if (position == 1){
+			start = start.getNext();
+			return;
+		}
+		
+		Knoten temp = start;
+		
+		for (int i = 1; i < position; i++){
+			temp = temp.getNext();
+		}
+		
+		// jetzt ist der Knoten temp == dem Vorgänger des zu löschenden Knoten;
+		temp.setNext(temp.getNext().getNext());
+		
+	}
+	
 	public void add(int position, Knoten k){
 		if (position == 1){
 			k.setNext(start);
