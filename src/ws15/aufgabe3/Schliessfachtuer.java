@@ -1,6 +1,7 @@
 package ws15.aufgabe3;
 
 public class Schliessfachtuer {
+	// Für dich Henry
 
 	private int nummer;
 	private boolean offen;
