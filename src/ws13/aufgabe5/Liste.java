@@ -19,11 +19,15 @@ public class Liste {
 	public String[] toArray() {
 		int length = 0;
 		Knoten temp = start;
+		
+		// erstmal die Anzahl der Knoten ermitteln
 		while (temp != null) {
 			length++;
 			temp = temp.getNext();
 		}
 		String[] result = new String[length];
+		
+		// temp wieder auf Anfang gesetzt
 		temp = start;
 		for (int i = 0; i < result.length; i++) {
 			result[i] = temp.getName();
