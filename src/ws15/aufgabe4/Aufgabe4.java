@@ -14,16 +14,50 @@ public class Aufgabe4 {
 
 		System.out.println("ready");
 		// 4b
-		for (int i = 0; i < array.length; i++) {
-			for (int j = i; j < array.length; j += i) {
-				if (array[j].isOffen() == false) {
-					array[j].setOffen(true);
-				} else {
-					array[j].setOffen(false);
+
+		// Erste Schleife, entspricht den 100 Durchgängen
+		// i = Durchgangsnummer
+		for (int i = 1; i <= 100; i++) {
+
+			// Zweite Schleife, das sind die 100 Schließfächer
+			// j = Schließfachnummer
+			for (int j = 0; j < array.length; j++) {
+
+				// Das, was in der Aufgabe so kompliziert beschrieben wurde,
+				// mit beim ersten Durchgang jede Tür,
+				// beim zweiten D. jede zweite Tür, ...
+
+				// Kann im Programm ganz einfach mit Modulo Durchgangsnummer
+				// gelöst werden
+				if (j % i == 0) {
+					// Jetzt muss die Schließfachtür geswitcht werden
+					// Immer das Gegenteil von isOffen an setOffen übergeben
+					array[j].setOffen(!array[j].isOffen());
+
+					// alternativ geht auch das etwas längere if else:
+					// if(array[j].isOffen()){
+					// array[j].setOffen(false);
+					// } else {
+					// array[j].setOffen(true);
+					// }
+
 				}
+
+				System.out.print(array[j]);
 			}
-			System.out.print(array[i]);
+			// Nach jedem Durchgang erfolgt ein Zeilenwechsel
+			System.out.println();
 		}
+		
+		// 4 c
+		int counter = 0;
+		
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].isOffen())
+				counter++;
+		}
+		System.out.println("Anzahl offener Türen: " + counter);
+		
 
 	}
 }
