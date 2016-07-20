@@ -11,7 +11,7 @@ public class KleinNachGross {
 				char c = input[i][j];
 				// Methode istKleinbuchstabe ist unten definiert
 				if (istKleinBuchstabe(c)) {
-					// minus 32, um die Kleinbuchstaben zu bekommen
+					// minus 32, um die Grossbuchstaben zu bekommen
 					c = (char) (c - 32);
 					// c ist jetzt ein Großbuchstabe und wieder in das Feld
 					// stecken
