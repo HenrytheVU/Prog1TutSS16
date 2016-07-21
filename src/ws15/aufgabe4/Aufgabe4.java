@@ -21,7 +21,7 @@ public class Aufgabe4 {
 
 			// Zweite Schleife, das sind die 100 Schlieﬂf‰cher
 			// j = Schlieﬂfachnummer
-			for (int j = 0; j < array.length; j++) {
+			for (int j = 1; j <= array.length; j++) {
 
 				// Das, was in der Aufgabe so kompliziert beschrieben wurde,
 				// mit beim ersten Durchgang jede T¸r,
@@ -32,7 +32,7 @@ public class Aufgabe4 {
 				if (j % i == 0) {
 					// Jetzt muss die Schlieﬂfacht¸r geswitcht werden
 					// Immer das Gegenteil von isOffen an setOffen ¸bergeben
-					array[j].setOffen(!array[j].isOffen());
+					array[j-1].setOffen(!array[j-1].isOffen());
 
 					// alternativ geht auch das etwas l‰ngere if else:
 					// if(array[j].isOffen()){
@@ -43,7 +43,7 @@ public class Aufgabe4 {
 
 				}
 
-				System.out.print(array[j]);
+				System.out.print(array[j-1]);
 			}
 			// Nach jedem Durchgang erfolgt ein Zeilenwechsel
 			System.out.println();
